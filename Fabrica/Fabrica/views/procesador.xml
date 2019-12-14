@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="fabrica_procesador_action" name="procesador" res_model="fabrica.procesador" />
+
+        <record id="fabrica_procesador_view_tree" model="ir.ui.view">
+            <field name="name">Lista de Procesadores</field>
+            <field name="model">fabrica.procesador</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="fabrica_procesador_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de Procesadores</field>
+            <field name="model">fabrica.procesador</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Procesador" id="menu_procesador" action="fabrica_procesador_action" parent="menu_fordenadores" sequence="10"/>
+    </data>
+</odoo>

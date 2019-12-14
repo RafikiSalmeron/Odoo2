@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="fabrica_coche_action" name="coche" res_model="fabrica.coche" />
+
+        <record id="fabrica_coche_view_tree" model="ir.ui.view">
+            <field name="name">Lista de coches</field>
+            <field name="model">fabrica.coche</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="bastidor" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="precio" />
+                    <field name="modeloRuedas" />
+                    <field name="codMotor" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="fabrica_coche_view_search" model="ir.ui.view">
+            <field name="name">Lista de coches</field>
+            <field name="model">fabrica.coche</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="bastidor" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="precio" />
+                    <field name="modeloRuedas" />
+                    <field name="codMotor" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Coche" id="menu_coche" action="fabrica_coche_action" parent="menu_fcoches" sequence="10"/>
+    </data>
+</odoo>

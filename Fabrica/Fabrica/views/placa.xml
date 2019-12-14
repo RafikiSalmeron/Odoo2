@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="fabrica_placa_action" name="placa" res_model="fabrica.placa" />
+
+        <record id="fabrica_placa_view_tree" model="ir.ui.view">
+            <field name="name">Lista de Placas Base</field>
+            <field name="model">fabrica.placa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="fabrica_placa_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de Placas Base</field>
+            <field name="model">fabrica.placa</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Placa Base" id="menu_placa" action="fabrica_placa_action" parent="menu_fordenadores" sequence="10"/>
+    </data>
+</odoo>

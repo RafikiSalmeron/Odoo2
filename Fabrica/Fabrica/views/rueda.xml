@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="fabrica_rueda_action" name="rueda" res_model="fabrica.rueda" />
+
+        <record id="fabrica_rueda_view_tree" model="ir.ui.view">
+            <field name="name">Lista de ruedas</field>
+            <field name="model">fabrica.rueda</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="pulgadas" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="fabrica_rueda_view_search" model="ir.ui.view">
+            <field name="name">Lista de ruedas</field>
+            <field name="model">fabrica.rueda</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="pulgadas" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Rueda" id="menu_rueda" action="fabrica_rueda_action" parent="menu_fcoches" sequence="10"/>
+    </data>
+</odoo>
